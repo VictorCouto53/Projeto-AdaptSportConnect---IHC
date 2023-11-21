@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AdaptSportConnect</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="/src/script.js"></script>
+</head>
+
+<body>
+    <div class="userDataMain">
+        <div id="userHeader">
+            <div id="userDataArrowReturn">
+                <img src="../images/arrow-return.png" alt="return" style="cursor: pointer;" onclick=returnPage()>
+            </div>
+            <div id="userHeaderImage">
+                <img src="../images/userIcon.png" alt="user icon">
+            </div>
+        </div>
+        <div id="userDataContent">
+            <div id="userDataName">
+                <p class="userDataParagraph">User 02</p>
+                <img src="../images/bic.png" alt="pen image">
+            </div>
+            <div id="userData">
+                <p class="userDataParagraph">
+                    <span>Dados Pessoas</span><br />
+                    <line></line><br />
+                    <span>Nome: </span>Marcus Aurelius<br />
+                    <span>Idade: </span>27 anos<br />
+                    <span>Deficiência Física: </span>Amputação de membro<br />
+                    <span>Modalidade: </span>Natação<br />
+                </p>
+            </div>
+            <div id="userDataEvents">
+                <p class="userDataParagraph"><span>Meus Eventos</span></p>
+                <div id="userDataEventesImage" alt="event image">
+                    <img src="../images/calendar.png" alt="calendar image" onclick=redirectToCalenderPage()>
+                </div>
+            </div>
+        </div>
+        <div class="menuLowContainer">
+            <img src="../images/home.png" alt="home image" onclick=redirectToHomePage() style="cursor: pointer;">
+            <img src="../images/config.png" alt="config image" onclick=redirectToConfigPageI() style="cursor: pointer;">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AdaptSportConnect</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="/src/script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="dataEventII">
+        <div id="dataEventIIHeader">
+            <div id="dataEventIIHeaderTittle">
+                <p id="dataEventParagraph">
+                    Nome do Evento
+                </p>
+            </div>
+            <div id="dataEventDate">
+                <p id="currentDate"></p>
+            </div>
+        </div>
+        <div id="dataEventIIMainContainer">
+            <div id="dataEventImage">
+                <img src="../images/image-III.png" alt="image event">
+            </div>
+
+            <div id="dataEventDescription">
+
+                <h1 id="dataEventParagraphTittle">Descrição do Evento</h1>
+                <p id="dataEventParagraphContent">Lorem ipsum dolor sit amet. Hic pariatur omnis est recusandae quod et
+                    nulla dolor ab quas maxime. Qui omnis commodi quo velit autem et recusandae eaque ut laboriosam
+                    harum sit eligendi optio ad animi possimus et omnis dignissimos</p>
+            </div>
+            <div id="dataEventButton">
+                <button id="dataEventBtn" style="cursor: pointer;">Inscrever-se</button>
+            </div>
+
+        </div>
+        <div class="menuLowContainer">
+            <img src="../images/home.png" alt="home image" onclick=redirectToHomePage() style="cursor: pointer;">
+            <img src="../images/config.png" alt="config image" onclick=redirectToConfigPageI() style="cursor: pointer;">
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function getCurrentDate() {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                const day = today.getDate().toString().padStart(2, '0');
+
+                return `${year}-${month}-${day}`;
+            }
+            document.getElementById("currentDate").textContent = getCurrentDate();
+        });
+
+    </script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const eventId = params.get('id');
+
+            const btn = document.getElementById("dataEventBtn");
+
+            btn.addEventListener("click", () => {
+                redirectToEventPage(eventId)
+            });
+
+            fetch(`/dataEventII/${eventId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao obter dados do evento');
+                    }
+                    return response.json();
+                })
+                .then(evento => {
+                    document.getElementById("dataEventParagraph").textContent = evento[0].nomeevento;
+                    document.getElementById("dataEventParagraphContent").textContent = evento[0].descricao;
+                })
+                .catch(error => {
+                    console.error('Erro na requisição:', error);
+                });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

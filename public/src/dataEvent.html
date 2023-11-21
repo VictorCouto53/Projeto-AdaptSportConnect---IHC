@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AdaptSportConnect</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="/src/script.js"></script>
+</head>
+
+<body>
+    <div class="eventMenu">
+        <div id="eventHeader">
+            <div id="dataEvent">
+                <p id="dataEventTittle">
+                    Inscrição
+                </p>
+            </div>
+            <div id="dataEventHeader">
+                <p id="currentDate"></p>
+            </div>
+        </div>
+        <div id="dataEventMain">
+            <div id="dataEventMainImage">
+                <img src="../images/image-II.png" alt="event image">
+            </div>
+            <div id="dataEventMainDescription">
+                <p class="paragraphEvent2">
+                    <span id="nomeEvento">Nome do evento:</span>
+                </p>
+                <p class="paragraphEvent2">
+                    <span id="localEvento">Localização:</span>
+                </p>
+                <p class="paragraphEvent2">
+                    <span id="dhEvento">Data e Horário:</span>
+                </p>
+                <p class="paragraphEvent2">
+                    <span id="acessEvento">Acessibilidades:</span>
+                </p>
+                <p class="paragraphEvent2">
+                    <span id="orgEvento">Organizador(es):</span>
+                </p>
+            </div>
+            <button id="eventButton" onclick=showSuccessMessage()>Confirmar Inscrição</button>
+            <div id="successMessage">Inscrição confirmada com sucesso!</div>
+        </div>
+        <div class="menuLowContainer">
+            <img src="../images/home.png" alt="home image" onclick=redirectToHomePage() style="cursor: pointer;">
+            <img src="../images/config.png" alt="config image" onclick=redirectToConfigPageI() style="cursor: pointer;">
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function getCurrentDate() {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                const day = today.getDate().toString().padStart(2, '0');
+
+                return `${year}-${month}-${day}`;
+            }
+            document.getElementById("currentDate").textContent = getCurrentDate();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const eventId = params.get('id');
+            fetch(`/dataEvent/${eventId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao obter dados do evento');
+                    }
+                    return response.json();
+                })
+                .then(evento => {
+                    document.getElementById("nomeEvento").textContent = `Nome do evento: ${evento[0].nomeevento}`;
+                    document.getElementById("localEvento").textContent = `Localização: ${evento[0].local}`;
+                    document.getElementById("dhEvento").textContent = `Data e hora: ${evento[0].datahorario}`;
+                    document.getElementById("acessEvento").textContent = `Acessibilidade: ${evento[0].acessibilidade}`;
+                    document.getElementById("orgEvento").textContent = `Organizadores: ${evento[0].organizadores}`;
+                })
+                .catch(error => {
+                    console.error('Erro na requisição:', error);
+                });
+        });
+    </script>
+
+</body>
+
+</html>

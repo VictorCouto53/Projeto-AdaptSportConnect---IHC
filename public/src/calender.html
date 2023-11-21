@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>AdaptSportConnect</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script defer src="/src/script.js"></script>
+
+    </head>
+    <body>
+        <div class="calender">
+            <div id="calenderHeader">
+                <div id="calenderArrowReturn">
+                    <img src="../images/arrow-return.png" alt="arrow return" style="cursor: pointer;" onclick=returnPage()>
+                </div>
+            </div>
+            <div id="calenderMain">
+                <div id="headerMain">
+                    <img src="../images/calendar.png" alt="calender image">
+                    <h1 id="calenderMonth">Meus eventos</h1>
+                </div>  
+                <div id="calenderContent">
+                    <div id="days">
+                        <div class="day">Dom</div>
+                        <div class="day">Seg</div>
+                        <div class="day">Ter</div>
+                        <div class="day">Qua</div>
+                        <div class="day">Qui</div>
+                        <div class="day">Sex</div>
+                        <div class="day">Sáb</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuLowContainer">
+                <img src="../images/home.png" alt="home image" onclick=redirectToHomePage() style="cursor: pointer;">
+                <img src="../images/config.png" alt="config image" onclick=redirectToConfigPageI() style="cursor: pointer;">
+            </div>
+        </div>
+    </body>
+</html>

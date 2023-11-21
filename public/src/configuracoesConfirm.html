@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>AdaptSportConnect</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script defer src="/src/script.js"></script>
+    </head>
+    <body>
+        <div class="configuracoes">
+            <div class="configHeader">
+                <div id="configHeaderTittle">
+                    <p id="configTittleContent">
+                        Configurações
+                    </p>
+                    <div id="configHeaderTittleData">
+                        <img src="../images/userIcon.png">
+                        <div id="configParagraphTittle">
+                            <p class="configParagraphContent">
+                                User02
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="configHeaderData">
+                    <p id="currentDate"></p>
+                </div>
+            </div>
+            <div id="configResetData">
+                <div id="formsConfigData">
+                    <form id="configForm" action="#" method="post" onsubmit="return redirectToConfigPage()">
+                        <div class="configFormContent">
+                            <p class="configFormsText">Insira o novo email</p>
+                            <input class="formsReset" type="text" id="emailReset" name="email" required placeholder="youremail@email.com">
+                        </div>
+
+                        <div class="configFormContent">
+                            <p class="configFormsText">Confirme o email</p>
+                            <input class="formsReset" type="text" id="emailResetConfirm" name="email" required placeholder="youremail@email.com">
+                        </div>
+
+                        <div class="configFormContent">
+                            <p class="configFormsText">Informe a nova senha</p>
+                            <input class="formsReset" type="password" id="passwordReset" name="password" required placeholder="********">
+                        </div>
+                    </form>
+                </div>
+                <div id="configResetConfirm">
+                    <button id="configResetButton" onclick=redirectToConfigPage()>CONFIRMAR</button>
+                </div>
+            </div>
+            <div class="menuLowContainer">
+                <img src="../images/home.png" alt="home image" onclick=redirectToHomePage() style="cursor: pointer;">
+                <img src="../images/config.png" alt="config image" onclick=redirectToConfigPageI() style="cursor: pointer;">
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                function getCurrentDate() {
+                    const today = new Date();
+                    const year = today.getFullYear();
+                    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                    const day = today.getDate().toString().padStart(2, '0');
+    
+                    return `${year}-${month}-${day}`;
+                }
+                document.getElementById("currentDate").textContent = getCurrentDate();
+            });
+        </script>
+    </body>
+</html>

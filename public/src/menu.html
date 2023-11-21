@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AdaptSportConnect</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="/src/script.js"></script>
+</head>
+
+<body>
+    <div class="menu">
+        <div id="sideBar">
+            <div id="sideBarContent">
+                <img src="../images/menuII.png" onclick=openMenu() style="cursor: pointer;">
+                <img src="../images/calenderII.png" onclick=redirectToCalenderPage() style="cursor: pointer;">
+                <img src="../images/lupa.png" onclick=redirectToSearchPage() style="cursor: pointer;">
+                <img src="../images/userII.png" onclick=redirectToPerfilPage() style="cursor: pointer;">
+                <img src="../images/return.png" onclick=redirectOutApp() style="cursor: pointer;">
+            </div>
+        </div>
+        <div class="menuHeader">
+            <div id="menuHeaderSymbol">
+                <img src="../images/menu.png" onclick=openMenu() style="cursor: pointer;">
+            </div>
+            <div id="menuTittle">
+                <div id="menuData">
+                    <p id="currentDate"></p>
+                </div>
+                <p class="tittleContent">
+                    <span>AdaptSportConnect</span> <br /> EVENTOS
+                </p>
+            </div>
+        </div>
+        <div class="menuMain">
+            <div id="menuMainContainer" class="scrollable-container">
+                <img class="image-range" src="../images/image-I.png" alt="event image" onclick=redirectToEventIIPage(1)>
+                <img class="image-range" src="../images/image-II.png" alt="event image"
+                    onclick=redirectToEventIIPage(2)>
+                <img class="image-range" src="../images/image-III.png" alt="event image"
+                    onclick=redirectToEventIIPage(3)>
+                <img class="image-range" src="../images/image-II.png" alt="event image"
+                    onclick=redirectToEventIIPage(4)>
+                <img class="image-range" src="../images/image-I.png" alt="event image" onclick=redirectToEventIIPage(5)>
+            </div>
+        </div>
+        <div class="menuLowContainer">
+            <img src="../images/home.png" alt="home image" onclick=redirectToHomePage() style="cursor: pointer;">
+            <img src="../images/config.png" alt="config image" onclick=redirectToConfigPageI() style="cursor: pointer;">
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function getCurrentDate() {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                const day = today.getDate().toString().padStart(2, '0');
+
+                return `${year}-${month}-${day}`;
+            }
+            document.getElementById("currentDate").textContent = getCurrentDate();
+        });
+    </script>
+</body>
+
+</html>

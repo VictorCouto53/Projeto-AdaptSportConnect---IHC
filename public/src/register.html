@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>AdaptSportConnect</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script defer src="/src/script.js"></script>
+
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div class="container">
+                <div class="containerImage">
+                    <a href="#">
+                        <img src="/images/logoAPC.png">
+                    </a>
+                </div>
+                <div class="containerContent">
+                    <div class="containerContentLogin">
+                        <form class="forms" action="/login" method="get" onsubmit="return redirectToLoginPage()">
+                            <input class="formEmail" type="text" id="email" name="email" required placeholder="Informe o e-mail">
+                            <input class="formEmail" type="text" id="emailConfirm" name="emailConfirm" required placeholder="Confirme o e-mail">
+                            <input class="formPassword" type="password" id="password" name="password" required placeholder="Informe a senha">
+                            <input class="loginButton" type="submit" value="REGISTRAR" onclick=redirectToLoginPage()>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contentRegister">
+                <p class="paragraphContent">já possui conta? Entre <span onclick=redirectToLoginIIPage() style="cursor: pointer;"> aqui.</span></p>
+            </div>
+        </div>
+    </body>
+
+</html>

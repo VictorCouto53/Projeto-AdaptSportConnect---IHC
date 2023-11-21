@@ -1,0 +1,888 @@
+:root {
+    --color-01: #2F2F2F;
+    --color-02: #CC00FF;
+    --color-03: #FFFFFF;
+    --color-04: #000000;
+    --color-05: #181818;
+    --color-06: #7a7a7a;
+    --color-07: #4d4d4d;
+    --color-08: #56bdf7;
+    --color-09: #e1dede;
+}
+
+html {
+    background-color: var(--color-04);
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu,
+.configuracoes,
+.eventMenu,
+.userDataMain,
+.calender,
+#pesquisa,
+.dataEventII,
+.pesquisa {
+    width: 360px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--color-03);
+}
+
+
+.mainContainer {
+    background-color: var(--color-01);
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 630px;
+}
+
+.container {
+    background: linear-gradient(to top, var(--color-04), var(--color-06));
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 480px;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.containerImage {
+    background-color: transparent;
+    border-radius: 20px;
+    display: flex;
+    width: 275px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.containerContent {
+    background-color: transparent;
+    border-radius: 20px;
+    display: grid;
+    width: 275px;
+    height: 220px;
+    justify-content: center;
+}
+
+.containerContentLogin {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.formEmail {
+    color: var(--color-03);
+    height: 40px;
+    padding-left: 50px;
+    background-color: transparent;
+    background-image: url("/images/email.png");
+    background-repeat: no-repeat;
+    border: none;
+    border-bottom: 2px solid var(--color-03);
+    transition: width 0.5s ease-in-out;
+}
+
+.formEmail::placeholder {
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.formPassword {
+    color: var(--color-03);
+    height: 40px;
+    padding-left: 50px;
+    background-color: transparent;
+    background-image: url("/images/password.png");
+    background-repeat: no-repeat;
+    border: none;
+    border-bottom: 2px solid var(--color-03);
+    transition: width 0.4s ease-in-out;
+}
+
+.formPassword::placeholder {
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.loginButton {
+    font-size: 20px;
+    color: var(--color-03);
+    background: linear-gradient(to top, var(--color-02), var(--color-03));
+    height: 45px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+    background: linear-gradient(to top, var(--color-03), var(--color-04));
+}
+
+.contentRegister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraphContent {
+    font-size: 16px;
+    color: var(--color-03);
+}
+
+.paragraphContent span {
+    font-size: 16px;
+    color: var(--color-02);
+}
+
+.paragraphContent a {
+    font-size: 16px;
+    color: var(--color-02);
+}
+
+.paragraphContent a:visited {
+    font-size: 16px;
+    color: var(--color-02);
+}
+
+.menuHeader {
+    background-image: url("/images/back_blue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 360px;
+    height: 160px;
+    display: inline-flex;
+    gap: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#menuHeaderSymbol {
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+.tittleContent {
+    padding-top: 13px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: var(--color-03);
+}
+
+.tittleContent span {
+    padding-right: 20px;
+}
+
+.configParagraphContent {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: var(--color-04);
+    margin: 0;
+}
+
+.configParagraphContent span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-04);
+}
+
+#menuData {
+    padding-top: 25px;
+    margin-left: 150px;
+    color: var(--color-03);
+    font-weight: bold;
+}
+
+.menuMain {
+    border-radius: 15px;
+    width: 360px;
+    height: 400px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentDate {
+    font-weight: bold;
+    color: var(--color-03);
+}
+
+#menuMainContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+    margin-top: 20px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.image-range {
+    width: 240px;
+    height: 130px;
+}
+
+.menuLowContainer {
+    position: absolute;
+    z-index: 2;
+    background-color: var(--color-07);
+    width: 360px;
+    height: 70px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.scrollable-container {
+    height: 280px;
+    overflow: auto;
+    position: relative;
+}
+
+.scrollable-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background: var(--color-01);
+    border-radius: 15px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb:hover {
+    background: var(--color-01);
+}
+
+.configHeader {
+    background-image: url("/images/back_blue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 360px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#configTittleContent {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-03);
+    margin: 10px;
+}
+
+#configHeaderTittle {
+    display: grid;
+    justify-content: center;
+    margin-top: 150px;
+    margin-left: 15px;
+}
+
+#configHeaderTittleData {
+    display: inline-flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#configParagraphTittle {
+    margin-top: 10px;
+}
+
+#configHeaderData {
+    font-weight: bold;
+    color: var(--color-03);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 160px;
+}
+
+.configMain {
+    height: 360px;
+    width: 360px;
+    display: grid;
+}
+
+#configMainContainer {
+    width: 360px;
+    height: 260px;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    margin: 30px 20px 0;
+}
+
+.configData {
+    display: grid;
+    align-items: center;
+}
+
+#successMessage {
+    display: none;
+    color: #0526fb;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 20px;
+    margin: auto;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    animation: fadeIn 1s ease-out;
+    box-shadow: 0px 0px 10px 0px #3498db;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.buttonResetData {
+    background: linear-gradient(to top, var(--color-08), var(--color-03));
+    border-radius: 20px;
+    border-style: none;
+    color: var(--color-04);
+    font-weight: bold;
+    height: 30px;
+    width: 120px;
+    font-size: 14px;
+    margin-top: 10px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#configResetData {
+    height: 360px;
+    width: 360px;
+    display: grid;
+}
+
+#formsConfigData {
+    margin-top: 20px;
+    height: 200px;
+    width: 360px;
+}
+
+#configForm {
+    display: grid;
+    margin: 20px 20px 0;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.configFormsText {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-04);
+}
+
+#configResetConfirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#configResetButton {
+    background: linear-gradient(to top, var(--color-08), var(--color-03));
+    border-radius: 20px;
+    border-style: none;
+    color: var(--color-04);
+    font-weight: bold;
+    height: 30px;
+    width: 120px;
+    font-size: 14px;
+    margin-top: 10px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formsReset {
+    color: var(--color-03);
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--color-04);
+    transition: width 0.5s ease-in-out;
+}
+
+.formsReset::placeholder {
+    font-size: 16px;
+    color: var(--color-01);
+    opacity: 0.5;
+}
+
+#eventHeader {
+    background-image: url("/images/back_blue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 360px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#dataEvent {
+    display: grid;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+#dataEventTittle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-03);
+}
+
+#dataEventHeader {
+    color: var(--color-03);
+    font-weight: bold;
+    margin-top: 80px;
+    margin-left: 100px;
+    height: 200px;
+    width: 360px;
+}
+
+#dataEventMain {
+    height: 390px;
+    width: 360px;
+    display: grid;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+
+.paragraphEvent {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    color: var(--color-04);
+    margin: 0;
+}
+
+.paragraphEvent span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-04);
+}
+
+#eventButton {
+    background: linear-gradient(to top, var(--color-08), var(--color-03));
+    border-radius: 20px;
+    border-style: none;
+    color: var(--color-04);
+    font-weight: bold;
+    margin-left: 40px;
+    height: 30px;
+    width: 180px;
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#userHeader {
+    background-image: url("/images/back_blue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 360px;
+    height: 140px;
+    display: flex;
+    gap: 80px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#userDataArrowReturn {
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+#userHeaderImage {
+    margin-top: 100px;
+}
+
+#userDataContent {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    width: 360px;
+}
+
+#userDataName {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-09);
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 200px;
+    margin-left: 45px;
+    height: 40px;
+}
+
+.userDataParagraph {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    color: var(--color-04);
+    margin: 10px;
+}
+
+.userDataParagraph line {
+    border: 1px solid var(--color-04);
+    margin-top: 2px;
+    display: flex;
+    width: 280px;
+    height: 0;
+}
+
+.userDataParagraph span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-04);
+}
+
+#userData {
+    background-color: var(--color-08);
+    border-radius: 15px;
+    border: 1px solid var(--color-04)
+}
+
+#userDataEvents {
+    display: grid;
+    align-items: center;
+}
+
+#userDataEventesImage {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+#calenderHeader {
+    background-image: url("/images/back_blue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 360px;
+    height: 80px;
+    display: flex;
+}
+
+#calenderArrowReturn {
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+#calenderMain {
+    width: 360px;
+    height: 480px;
+}
+
+#calenderContent {
+    width: 340px;
+    margin: 45px auto;
+    border: 1px solid var(--color-04);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-04);
+}
+
+#headerMain {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-left: 25px;
+    gap: 20px;
+}
+
+#calenderMonth {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-04);
+}
+
+#days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--color-04);
+}
+
+#dataEventIIHeader {
+    background-image: url("/images/back_blue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 360px;
+    height: 140px;
+    display: flex;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#dataEventIIMainContainer {
+    width: 360px;
+    height: 420px;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+}
+
+#dataEventMainDescription {
+    width: 280px;
+    height: 130px;
+}
+
+#dataEventImage {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#dataEventDescription {
+    margin: 0 10px;
+}
+
+#dataEventIIHeaderTittle {
+    margin-top: 65px;
+    margin-left: 25px;
+}
+
+#dataEventDate {
+    margin-top: 15px;
+    margin-left: 15px;
+    color: var(--color-03);
+    font-weight: bold;
+}
+
+
+#dataEventDay {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-03);
+}
+
+#dataEventParagraph {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    color: var(--color-03);
+    width: 200px;
+}
+
+#dataEventParagraphTittle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-04);
+}
+
+#dataEventParagraphContent {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    color: var(--color-04);
+}
+
+#dataEventButton {
+    display: flex;
+    justify-content: center;
+    margin: 5px 10px 15px;
+}
+
+#dataEventBtn {
+    background: linear-gradient(to top, var(--color-08), var(--color-03));
+    border-radius: 20px;
+    border-style: none;
+    color: var(--color-04);
+    font-weight: bold;
+    height: 30px;
+    width: 180px;
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pesquisaHeader {
+    background-image: url("/images/back_blue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 360px;
+    height: 140px;
+    display: flex;
+    gap: 100px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#pesquisaTittle {
+    margin-top: 35px;
+    margin-left: 25px;
+}
+
+#pesquisaDate {
+    margin-top: 15px;
+    margin-left: 30px;
+    color: var(--color-03);
+    font-weight: bold;
+}
+
+#pesquisaTittleDescription {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-03);
+}
+
+#pesquisaDateDescription {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-03);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+
+#searchInput {
+    padding: 10px;
+    border: 1px solid var(--color-06);
+    background-color: var(--color-09);
+    border-radius: 5px;
+}
+
+
+#searchButton {
+    background-color: var(--color-08);
+    color: var(--color-03);
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+#searchInput:focus {
+    border-color: var(--color-08);
+    box-shadow: 0 0 5px var(--color-08);
+}
+
+#pesquisaMain {
+    height: 390px;
+    width: 360px;
+    margin-top: 30px;
+    display: grid;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#pesquisaMainContent {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    gap: 30px;
+}
+
+#pesquisaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pesquisaContainerImages {
+    display: grid;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#sideBar {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    border-top-right-radius: 20px;
+    height: 760px;
+    width: 120px;
+    background-color: var(--color-04);
+    opacity: 0.9;
+}
+
+#sideBarContent {
+    margin-top: 60px;
+    margin-left: 30px;
+    display: inline-grid;
+    gap: 40px;
+
+}
+
+#pesquisa {
+    background-color: var(--color-03);
+    width: 360px;
+}
+
+.paragraphEvent2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    color: var(--color-04);
+    margin: 0;
+}
